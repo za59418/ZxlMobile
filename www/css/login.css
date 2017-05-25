@@ -1,0 +1,118 @@
+﻿.login-images {
+    background-color: #33c7fe;
+    text-align: center;
+    height: 220px;
+    /*display: block;
+    vertical-align: middle;*/
+    /*position: relative;
+    left: 50%;
+    top: 50%;*/
+}
+
+
+.login-images-icon {
+    margin: 0 auto;
+    /*padding-left:100px;
+    padding-top:50px;*/
+    /*text-align: center;*/
+    display: block;
+    vertical-align: middle;
+    /*border: 1px solid red;*/
+    position: relative;
+    top: 28%;
+    /*height: 200px;
+    line-height: 200px;
+    overflow: hidden;*/
+}
+
+    .login-images-icon img {
+        -moz-transition-duration: 0.8s;
+        background-color: #FFFFFF;
+        background-position: -30px 50%;
+        border: 1px solid #CCCCCC;
+        border-radius: 60px;
+        color: #565656;
+        /*display: block;*/
+        /*float: left;*/
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        text-indent: 0;
+        padding: 2px;
+    }
+
+        .login-images-icon img:hover {
+            /*border: 1px solid #39bdf1;*/
+            border: 2px solid #ffffff;
+        }
+
+.login-content .item:first-child {
+    border-top-width: 0;
+}
+
+.login-content input {
+    height: 48px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Microsoft YaHei, Helvitica, Verdana, Tohoma, Arial, san-serif;
+}
+
+.login-content span {
+    text-align: center;
+    margin-right: 20px;
+    font-size: 20px;
+    color: #999;
+}
+
+.login-button {
+    padding-top: 32px;
+    text-align: center;
+}
+
+.btn-login {
+    width: 80%;
+    height: 50px;
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-family: Microsoft YaHei, Helvitica, Verdana, Tohoma, Arial, san-serif;
+}
+
+.login-scroll-content{
+    bottom:40px;
+}
+
+.login-foot {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+@media(min-width:680px) {
+    .login-images {
+        height: 320px;
+    }
+
+    .login-images-icon img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .login-content input {
+        font-size: 22px;
+        line-height: 48px;
+    }
+
+    .login-content i {
+        font-size: 24px;
+    }
+
+    .login-content span {
+        margin-right: 20px;
+        margin-left: 10px;
+        margin-top: 3px;
+    }
+}

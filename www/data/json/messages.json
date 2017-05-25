@@ -1,0 +1,71 @@
+{
+  "noReadMessages": [
+    {
+      "id": 1,
+      "SendUserImg": "img/ben.png",
+      "SendUserName": "管理员",
+      "TypeDesc": "",
+      "IsShowDelete": "",
+      "Mid": "",
+      "SendDate": "2017-05-25",
+      "MType": "",
+      "SysName": "",
+      "BimName": "龙湖三期工程",
+      "MContent": "请尽快办理！"
+    },
+    {
+      "id": 2,
+      "SendUserImg": "img/max.png",
+      "SendUserName": "安瑶",
+      "TypeDesc": "",
+      "IsShowDelete": "",
+      "Mid": "",
+      "SendDate": "2017-05-25",
+      "MType": "",
+      "SysName": "",
+      "BimName": "东韵邪园改名",
+      "MContent": "请尽快办理！"
+    },
+    {
+      "id": 3,
+      "SendUserImg": "img/mike.png",
+      "SendUserName": "测试人员",
+      "TypeDesc": "",
+      "IsShowDelete": "",
+      "Mid": "",
+      "SendDate": "2017-05-25",
+      "MType": "",
+      "SysName": "",
+      "BimName": "环球中心",
+      "MContent": "请尽快办理！"
+    },
+    {
+      "id": 4,
+      "SendUserImg": "img/perry.png",
+      "SendUserName": "自己",
+      "TypeDesc": "",
+      "IsShowDelete": "",
+      "Mid": "",
+      "SendDate": "2017-05-25",
+      "MType": "",
+      "SysName": "",
+      "BimName": "世纪城地铁一号线二期",
+      "MContent": "请尽快办理！"
+    }
+  ],
+    "readMessages": [
+    {
+      "id": 5,
+      "SendUserImg": "img/adam.jpg",
+      "SendUserName": "刘德华",
+      "TypeDesc": "",
+      "IsShowDelete":"",
+      "Mid": "",
+      "SendDate":"2017-05-24",
+      "MType":"",
+      "SysName": "",
+      "BimName":"二环高架",
+      "MContent": "请尽快办理！"
+    }
+  ]
+}

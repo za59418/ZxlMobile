@@ -1,0 +1,163 @@
+﻿/* 背景颜色 */
+.bgcolor {
+    background-color: #f0f0f0; 
+}
+
+.portal {
+}
+        .portal .mainmenu:after {
+            clear: both;
+            content: " ";
+            display: block;
+        }
+
+    .portal .mainmenu li {
+        float: left;
+        width: 33.3%;
+        padding-top:33.3%;
+        position:relative;
+        background-color: #FFF;
+        border-right: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+
+    .portal .mainmenu li:nth-of-type(3n){
+        border-right: none;
+    }
+
+    .portal .mainmenu li .item{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        border:none;
+        margin:0;
+    }
+
+        .portal .mainmenu li .topcenter {
+            position:absolute;
+            top:50%;
+            left:0;
+            width:100%;
+            color: #222;
+            text-align: center;
+            text-decoration: none;
+            padding:0 10% 0 10%;
+        }
+
+        .portal .mainmenu li .contentwrap{
+            display:block;
+            top:-45px;
+            height:90px;
+            position:relative;
+        }
+
+        .portal .mainmenu li .linkIcon {
+            line-height:55px;
+            font-size: 35px;
+        }
+
+        .portal .mainmenu li .linkText {
+            color: #222;
+            font-weight: 500;
+            font-size: 14px;
+            white-space:normal;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:2;
+            overflow:hidden;
+            }
+
+    .portal .linkIcon1 {
+        color:#fec100;
+    }
+
+    .portal .linkIcon2 {
+        color: #f26856;
+    }
+
+    .portal .linkIcon3 {
+        color: #0ab9f5;
+    }
+
+    .portal .linkIcon4 {
+        color: #00bc50;
+    }
+
+    .portal .linkIcon5 {
+        color:#89c500;
+    }
+
+    .portal .linkIcon6 {
+        color: #ff7184;
+    }
+
+    .portal .linkIcon7 {
+        color: #fe8115;
+    }
+
+    .portal .linkIcon8 {
+        color: #4fade6;
+    }
+    .portal .linkIcon9 {
+        color: #ffd800;
+    }
+
+.iconHightCenter {
+    line-height: 32px;
+}
+
+.tabBottomSet> .tabs  {
+    background-color: #fff;
+    background-image: none;
+    color: #222;
+    /*border-top:none;*/
+    border-top: 1px solid #eee !important;
+}
+
+.tabBottomSet> .tabs .tab-item-active{
+    color:rgb(253,172,52);
+}
+
+/* 平板 */
+@media (min-width:680px) {
+    .portal .mainmenu li .contentwrap {
+        top: -75px;
+        height: 150px;
+    }
+    .portal .mainmenu li .linkIcon {
+        line-height: 100px;
+        font-size: 60px;
+        }
+    .portal .mainmenu li .linkIcon {
+        line-height: 100px;
+        font-size: 60px;
+     }
+    .portal .mainmenu li .linkText{
+        font-size: 20px;
+    }
+
+    .portal .has-tabs{
+        bottom:60px;
+    }
+
+    .portal .mainmenu li{
+        padding-top:24%;
+    }
+    
+    .tabBottomSet .tabs{
+        height:60px;
+        line-height:60px;
+    }
+
+    .tabBottomSet .icon{
+        font-size:40px;
+        height:40px;
+    }
+
+    .tabBottomSet > .tabs .tab-item{
+        max-width:200px;
+        font-size:14px;
+    }
+}

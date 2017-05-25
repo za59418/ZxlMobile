@@ -1,0 +1,32 @@
+<ion-header-bar align-title="left" class="bar-dark">
+    <div class="h1 title">应用</div>
+    <div class="buttons">
+        <button class="button no-animation button-icon icon ion-android-search">
+        </button>
+        <button class="button no-animation button-icon icon ion-android-add">
+        </button>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <ion-pane class="portal bgcolor">
+        <ion-content class="has-header has-tabs" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+            <ul class="mainmenu">
+                <li ng-repeat="jsonArr in applications">
+                    <a class="item" ng-click="mainGo(jsonArr.SysKey,jsonArr.SysName)">
+                        <span class="topcenter">
+                            <span class="contentwrap">
+                                <span class="{{jsonArr.icon}} linkIcon linkIcon{{$index+1}}"></span>
+                                <br />
+                                <span class="linkText">{{jsonArr.SysName}}</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li ng-repeat="item in blankItem track by $index">
+                    <a class="item">
+                    </a>
+                </li>
+            </ul>
+        </ion-content>
+    </ion-pane>
+</ion-view>

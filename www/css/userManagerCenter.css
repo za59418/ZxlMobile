@@ -1,0 +1,286 @@
+﻿.userManagerCenter ul {
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+    .userManagerCenter ul:last-child {
+        margin-bottom: 10px;
+    }
+
+    .userManagerCenter ul > li {
+        overflow: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 16px;
+        border-top: 1px solid #ddd;
+    }
+
+        .userManagerCenter ul > li:last-child {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .userManagerCenter ul > li > span {
+            display: inline-block;
+            clear: both;
+        }
+
+            .userManagerCenter ul > li > span:first-child {
+                margin-left: 5%;
+                width: 20%;
+                text-align: left;
+                font-weight: 500;
+                line-height: 100%;
+                color: #000;
+            }
+
+            .userManagerCenter ul > li > span:last-child {
+                width: 70%;
+                margin-right: 5%;
+                text-align: right;
+                float: right;
+                color: #999;
+            }
+
+            .userManagerCenter ul > li > span.middel {
+                line-height: 40px;
+            }
+
+            .userManagerCenter ul > li > span.colorblack {
+                color: #000;
+            }
+
+        .userManagerCenter ul > li > div {
+            width: 70%;
+            height: 40px;
+            margin-right: 5%;
+            text-align: right;
+            float: right;
+            color: #999;
+            display: inline-block;
+        }
+
+            /*.userManagerCenter ul > li > div > span {
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border-radius: 20px;
+                display: inline-block;
+            }*/
+            .userManagerCenter ul > li > div > img {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+            }
+
+            .userManagerCenter ul > li > div > span:last-child {
+                width: auto;
+                float: right;
+                line-height: 40px;
+                display: inline-block;
+            }
+
+            .userManagerCenter ul > li > div > span > i {
+                margin-left: 10px;
+                color: #999;
+            }
+
+        .userManagerCenter ul > li > span > i {
+            margin-left: 10px;
+            color: #999;
+        }
+
+        .userManagerCenter ul > li > div.logoff {
+            text-align: center;
+            width: 100%;
+            margin: 0px;
+            clear: both;
+            color: #000;
+            height: auto;
+        }
+
+.modifyUserInfo {
+    height: 100%;
+    width: 100%;
+}
+
+    .modifyUserInfo > input {
+        margin-top: 8%;
+        margin-left: 5%;
+        font-size: 18px;
+        border-bottom: 1px solid #eee;
+        width: 90%;
+    }
+
+.modifyPassWord {
+    width: 100%;
+    height: 100%;
+}
+
+    .modifyPassWord > div {
+        margin-top: 48px;
+    }
+
+        .modifyPassWord > div.mainContent {
+            margin-top: 10px;
+            background-color: #fff;
+        }
+
+        .modifyPassWord > div.TipDiv {
+            margin-top: 3px;
+            color: red;
+            font-size: 14px;
+            width: 95%;
+            text-align: right;
+            position: absolute;
+        }
+
+        .modifyPassWord > div.mainContent > p {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            font-size: 16px;
+            width: 100%;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 0px;
+        }
+
+            .modifyPassWord > div.mainContent > p:first-child {
+                border-top: 1px solid #eee;
+            }
+
+            .modifyPassWord > div.mainContent > p > span {
+                clear: both;
+                height: 34px;
+                line-height: 34px;
+                display: inline-block;
+                width: 35%;
+                margin-left: 5%;
+            }
+
+            .modifyPassWord > div.mainContent > p > input {
+                float: right;
+                text-align: right;
+                display: inline-block;
+                padding: 0px;
+                margin: 0px;
+                width: 55%;
+                margin-right: 5%;
+            }
+
+.platform-android .headImgActionSheet.action-sheet-backdrop.active {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.platform-android .headImgActionSheet .action-sheet {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+    .platform-android .headImgActionSheet .action-sheet .action-sheet-title,
+    .platform-android .headImgActionSheet .action-sheet .button {
+        text-align: center;
+        border-color: #d1d3d6;
+        font-size: 16px;
+        color: #000;
+    }
+/*原来颜色蓝色*/
+.headImgActionSheet .action-sheet .button {
+    color: #000;
+}
+/*标题我不用，所有暂时不管样式 .platform-android .action-sheet .action-sheet-title {
+    font-size: 14px;
+    padding: 16px;
+    color: #666; }*/
+.platform-android .headImgActionSheet .action-sheet .button.active,
+.platform-android .headImgActionSheet .action-sheet .button.activated {
+    background: #e4e5e7;
+}
+
+.platform-android .headImgActionSheet .action-sheet-group {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.platform-android .headImgActionSheet .action-sheet-cancel {
+    display: block;
+}
+
+    .platform-android .headImgActionSheet .action-sheet-cancel .button {
+        color: #666;
+    }
+/*边上我不加图标，不管样式
+.platform-android .action-sheet-has-icons .button {
+  padding-left: 56px; }*/
+
+@media(min-width:680px) {
+    .userManagerCenter ul {
+        margin-top: 20px;
+    }
+
+        .userManagerCenter ul:last-child {
+            margin-bottom: 20px;
+        }
+
+        .userManagerCenter ul > li {
+            font-size: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+            .userManagerCenter ul > li > span.middel {
+                line-height: 80px;
+            }
+
+            .userManagerCenter ul > li > div {
+                height: 80px;
+            }
+
+                /*.userManagerCenter ul > li > div > span {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 40px;
+                }*/
+                .userManagerCenter ul > li > div > img {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 40px;
+                }
+
+                .userManagerCenter ul > li > div > span:last-child {
+                    line-height: 80px;
+                }
+
+                .userManagerCenter ul > li > div > span > i {
+                    margin-left: 20px;
+                }
+
+            .userManagerCenter ul > li > span > i {
+                margin-left: 20px;
+            }
+
+    .modifyUserInfo > input {
+        font-size: 23px;
+    }
+
+    .modifyPassWord > div {
+        margin-top: 92px;
+    }
+
+        .modifyPassWord > div.mainContent {
+            margin-top: 20px;
+        }
+
+            .modifyPassWord > div.mainContent > p {
+                font-size: 20px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+
+        .modifyPassWord > div.TipDiv {
+            margin-top: 6px;
+            font-size: 18px;
+        }
+}

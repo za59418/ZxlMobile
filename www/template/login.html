@@ -1,0 +1,25 @@
+﻿<ion-view view-title="登陆">
+    <ion-content class="login-scroll-content">
+        <div class="login-container">
+            <div class="login-images">
+                <div class="login-images-icon">
+                    <img src="{{Url}}" />
+                </div>
+            </div>
+            <div class="login-content">
+                <label class="item item-input">
+                    <span><i class="icon-username"></i></span>
+                    <input ng-model="UserName" type="text" placeholder="用户名" required>
+                </label>
+                <label class="item item-input">
+                    <span><i class="icon-password"></i></span>
+                    <input ng-model="password" type="password" placeholder="密码" required>
+                </label>
+            </div>
+            <div class="login-button">
+                <button class="btn-login button button-energized" ng-click="login(UserName,password)">登录</button>
+            </div>
+        </div>
+    </ion-content>
+    <div class="login-foot"><p>2017 © 广州城市信息研究所有限公司</p></div>
+</ion-view>  
