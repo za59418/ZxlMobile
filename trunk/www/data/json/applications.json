@@ -1,0 +1,52 @@
+{
+  "applications": [
+    {
+      "id": 1,
+      "SysKey": "YWSP",
+      "SysName": "业务审批",
+      "icon":"icon-YWSP"
+    },
+    {
+      "id": 2,
+      "SysKey": "XZBG",
+      "SysName": "行政办公",
+      "icon": "icon-XZBG"
+    },
+    {
+      "id": 3,
+      "SysKey": "PHGL",
+      "SysName": "批后管理",
+      "icon": "icon-PHGL"
+    },
+    {
+      "id": 4,
+      "SysKey": "GHBZ",
+      "SysName": "规划编制",
+      "icon": "icon-GHBZ"
+    },
+    {
+      "id": 5,
+      "SysKey": "FXFK",
+      "SysName": "廉政风险",
+      "icon":"icon-FXFK"
+    },
+    {
+      "id": 6,
+      "SysKey": "GHYZT",
+      "SysName": "规划一张图",
+      "icon":"icon-GHYZT"
+    },
+    {
+      "id": 7,
+      "SysKey": "DAGL",
+      "SysName": "档案管理",
+      "icon":"icon-DAGL"
+    },
+    {
+      "id": 8,
+      "SysKey": "HYGL",
+      "SysName": "会议管理",
+      "icon":"icon-HYGL"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<ion-header-bar align-title="left" class="bar-dark">
+    <div class="h1 title">个人信息</div>
+    <div class="buttons">
+        <button class="button no-animation button-icon icon ion-android-search"></button>
+        <button class="button no-animation button-icon icon ion-android-add"></button>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <ion-pane class="portal bgcolor">
+        <ion-content class="has-header has-tabs bgcolor userManagerCenter" on-swipe-right="onSwipeRight()">
+            <ul>
+                <li>
+                    <span class="middel">头像</span>
+                    <div ng-click="operateHeadImg()">
+                        <!--<span id="HeadImg" style="background-image:url({{UserInfo.USERIMG}});"></span>-->
+                        <img id="HeadImg" src="{{UserInfo.USERIMG}}" />
+                        <span><i class="ion-chevron-right"></i></span>
+                    </div>
+                </li>
+                <li>
+                    <span>用户名</span>
+                    <span>{{UserInfo.USERNAME}}</span>
+                </li>
+                <li>
+                    <span>部门</span>
+                    <span>{{UserInfo.DEPARTMENT}}</span>
+                </li>
+                <li>
+                    <span>职位</span>
+                    <span>{{UserInfo.ROLE}}</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span>电话</span>
+                    <span class="colorblack" ng-click="ModifyUserInfo('电话', 'MOBILE')">{{UserInfo.MOBILE}}<i class="ion-chevron-right"></i></span>
+                </li>
+                <li>
+                    <span>手机</span>
+                    <span class="colorblack" ng-click="ModifyUserInfo('手机', 'PHONE')">{{UserInfo.PHONE}}<i class="ion-chevron-right"></i></span>
+                </li>
+                <li>
+                    <span>邮箱</span>
+                    <span class="colorblack" ng-click="ModifyUserInfo('邮箱', 'EMAIL')">{{UserInfo.EMAIL}}<i class="ion-chevron-right"></i></span>
+                </li>
+                <li>
+                    <span>更换密码</span>
+                    <span ng-click="ModifyPassWord('修改密码')"><i class="ion-chevron-right"></i></span>
+                </li>
+            </ul>
+            <ul>
+                <li><div class="logoff" ng-click="LogOff()">退出</div></li>
+            </ul>
+        </ion-content>
+    </ion-pane>
+</ion-view>

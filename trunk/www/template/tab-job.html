@@ -1,0 +1,22 @@
+<ion-header-bar align-title="left" class="bar-dark">
+    <div class="h1 title">工作</div>
+    <div class="buttons">
+        <button class="button no-animation button-icon icon ion-android-search"></button>
+        <button class="button no-animation button-icon icon ion-android-add"></button>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <ion-pane class="portal bgcolor">
+        <ion-content on-swipe-left="onSwipeLeft()">
+            <ion-list rj-close-back-drop>
+                <ion-item class="item-avatar" ng-class="{'rj-item-top': message.isTop}" on-hold="popupMessageOpthins(message)" rj-hold-active ng-repeat="project in projects | orderBy:['isTop', 'lastMessage.timeFrome1970']:true" ng-click="messageDetils(project)">
+                    <img ng-src="{{project.pic}}">
+                    <span class="rj-sm-red-icon" ng-show="project.showHints"><p ng-bind="project.noReadMessages"></p></span>
+                    <h2 ng-bind="project.name"></h2>
+                    <p class="rj-list-p" ng-bind="project.lastMessage.content"></p>
+                    <span class="rj-push-right" ng-bind="project.lastMessage.time"></span>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-pane>
+</ion-view>

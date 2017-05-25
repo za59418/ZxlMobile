@@ -1,0 +1,65 @@
+<ion-header-bar align-title="left" class="bar-dark">
+    <div class="h1 title">消息</div>
+    <div class="buttons">
+        <button class="button no-animation button-icon icon ion-android-search">
+        </button>
+        <button class="button no-animation button-icon icon ion-android-add">
+        </button>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <ion-pane class="portal bgcolor">
+        <ion-content class="messageBoxContainer" scroll="true" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+            <div class="tabs-color-positive tabs-top tabs tabs-striped messageTabsContainer">
+                <a class="tab-item {{item.activeclass}} {{item.boderClass}}" ng-click="onCaseTabSelected(item);" ng-repeat="item in List">
+                    {{item.text}}
+                    <span class="badge badge-assertive" ng-if="item.isShowTip" style="position:static">{{MessageCount}}</span>
+                </a>
+            </div>
+            <div class="messageSearchContainer" ng-repeat="item in List" ng-show="item.active">
+                <label class="item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" placeholder="{{item.searchText}}" ng-model="item.query" ng-change="searchData(item.query,item)">
+                </label>
+            </div>
+            <div class="bussinessBoxList">
+                <ul class="messageList messageUl" ng-repeat="item in messages">
+                    <li class="item messageItem">
+                        <div class="messageContent">
+                            <div class="message-images" ng-click="ReadMessage(item.Mid,item)">
+                                <div class="message-images-icon">
+                                    <img ng-src="{{item.SendUserImg}}" />
+                                </div>
+                            </div>
+                            <div class="messageTitle" ng-click="ReadMessage(item.Mid,item)">
+                                <div class="messageTitleMan">{{item.SendUserName}}</div>
+                                <div class="messageTitleTypeDesc">发来{{item.TypeDesc}}</div>
+                            </div>
+                            <div class="messageStateRemind messageRemind" ng-show="item.IsShowDelete" ng-click="DeleteMessage(item.Mid)">
+                                <span class="ion-close-circled"></span>
+                            </div>
+                            <div class="messageTime" ng-click="ReadMessage(item.Mid,item)">
+                                <span class="messageTimeDate">{{item.SendDate}}</span>
+                                &nbsp;
+                                <span class="messageTimeSysName" ng-if="item.MType==1?true:false">来自{{item.SysName}}</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item messageProjectContent" ng-hide="item.MType==2">
+                        项目名称:{{item.BimName}}
+                    </li>
+                    <li class="item lastLi">
+                        <span style="word-break:break-all;white-space:normal;">消息内容:{{item.MContent}}</span>
+                    </li>
+                </ul>
+            </div>
+            <ion-infinite-scroll ng-if="hasmore"
+                                 on-infinite="loadMore()"
+                                 distance="1%">
+            </ion-infinite-scroll>
+            <!--<div ng-if="!hasmore" style="text-align:center;color:red">
+                已经是最底部!
+            </div>-->
+        </ion-content>
+    </ion-pane>
+</ion-view>
