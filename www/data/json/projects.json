@@ -1,0 +1,451 @@
+﻿{
+    "ResultType": null, 
+    "ModelType": null, 
+    "Data": {
+        "TotalCount": 21, 
+        "PageIndex": 1, 
+        "PageSize": 10, 
+        "SeachHolderText": "业务名称/单位名称", 
+        "Instances": [
+            {
+                "TileFileDefine": {
+                    "FileName": "BIMTITLE", 
+                    "FileDesc": null, 
+                    "FileValue": "0"
+                }, 
+                "ContentFileDefines": [
+                    {
+                        "FileName": "BIMNAME", 
+                        "FileDesc": "办理事项", 
+                        "FileValue": "土地使用权出让前规划条件核发"
+                    }, 
+                    {
+                        "FileName": "UNITNAME", 
+                        "FileDesc": "单位名称", 
+                        "FileValue": null
+                    }, 
+                    {
+                        "FileName": "CONTENT_VALUE", 
+                        "FileDesc": "业务描述", 
+                        "FileValue": null
+                    }
+                ], 
+                "IsShowReceCaseButton": false, 
+                "ReceCaseButton": null, 
+                "BimId": "BM00004539", 
+                "ActId": "A002", 
+                "key": "2", 
+                "HasFreeTime": 1, 
+                "HasActFreeTime": 0, 
+                "FreeTime": 15, 
+                "TimeTip": 1, 
+                "ActFreeTime": 0, 
+                "ActTimeTip": 0
+            }, 
+            {
+                "TileFileDefine": {
+                    "FileName": "BIMTITLE", 
+                    "FileDesc": null, 
+                    "FileValue": "水岸新都商品房（二期）"
+                }, 
+                "ContentFileDefines": [
+                    {
+                        "FileName": "BIMNAME", 
+                        "FileDesc": "办理事项", 
+                        "FileValue": "建设项目选址意见书核发"
+                    }, 
+                    {
+                        "FileName": "UNITNAME", 
+                        "FileDesc": "单位名称", 
+                        "FileValue": null
+                    }, 
+                    {
+                        "FileName": "CONTENT_VALUE", 
+                        "FileDesc": "业务描述", 
+                        "FileValue": null
+                    }
+                ], 
+                "IsShowReceCaseButton": false, 
+                "ReceCaseButton": null, 
+                "BimId": "BM00004508", 
+                "ActId": "A002", 
+                "key": "4", 
+                "HasFreeTime": 1, 
+                "HasActFreeTime": 1, 
+                "FreeTime": 20, 
+                "TimeTip": 1, 
+                "ActFreeTime": 2, 
+                "ActTimeTip": 2
+            }, 
+            {
+                "TileFileDefine": {
+                    "FileName": "BIMTITLE", 
+                    "FileDesc": null, 
+                    "FileValue": "桃园小学"
+                }, 
+                "ContentFileDefines": [
+                    {
+                        "FileName": "BIMNAME", 
+                        "FileDesc": "办理事项", 
+                        "FileValue": "建设项目选址意见书核发"
+                    }, 
+                    {
+                        "FileName": "UNITNAME", 
+                        "FileDesc": "单位名称", 
+                        "FileValue": "春城房地产开发公司"
+                    }, 
+                    {
+                        "FileName": "CONTENT_VALUE", 
+                        "FileDesc": "业务描述", 
+                        "FileValue": null
+                    }
+                ], 
+                "IsShowReceCaseButton": false, 
+                "ReceCaseButton": null, 
+                "BimId": "BM00000424", 
+                "ActId": "A009", 
+                "key": "7", 
+                "HasFreeTime": 1, 
+                "HasActFreeTime": 0, 
+                "FreeTime": -430.4, 
+                "TimeTip": 3, 
+                "ActFreeTime": 0, 
+                "ActTimeTip": 0
+            }, 
+            {
+                "TileFileDefine": {
+                    "FileName": "BIMTITLE", 
+                    "FileDesc": null, 
+                    "FileValue": "滨湖实验幼儿园建设用地"
+                }, 
+                "ContentFileDefines": [
+                    {
+                        "FileName": "BIMNAME", 
+                        "FileDesc": "办理事项", 
+                        "FileValue": "建设用地规划许可证核发"
+                    }, 
+                    {
+                        "FileName": "UNITNAME", 
+                        "FileDesc": "单位名称", 
+                        "FileValue": "广盛开发"
+                    }, 
+                    {
+                        "FileName": "CONTENT_VALUE", 
+                        "FileDesc": "业务描述", 
+                        "FileValue": "申请用地类型：，用地面积：，项目类型：市政工程项目，容积率："
+                    }
+                ], 
+                "IsShowReceCaseButton": false, 
+                "ReceCaseButton": null, 
+                "BimId": "BM00002663", 
+                "ActId": "A013", 
+                "key": "4", 
+                "HasFreeTime": 1, 
+                "HasActFreeTime": 0, 
+                "FreeTime": -171.3, 
+                "TimeTip": 3, 
+                "ActFreeTime": 0, 
+                "ActTimeTip": 0
+            }, 
+            {
+                "TileFileDefine": {
+                    "FileName": "BIMTITLE", 
+                    "FileDesc": null, 
+                    "FileValue": "南闸中心幼儿园及风雨操场"
+                }, 
+                "ContentFileDefines": [
+                    {
+                        "FileName": "BIMNAME", 
+                        "FileDesc": "办理事项", 
+                        "FileValue": "建设项目选址意见书核发"
+                    }, 
+                    {
+                        "FileName": "UNITNAME", 
+                        "FileDesc": "单位名称", 
+                        "FileValue": "江阴市南闸镇人民政府"
+                    }, 
+                    {
+                        "FileName": "CONTENT_VALUE", 
+                        "FileDesc": "业务描述", 
+                        "FileValue": null
+                    }
+                ], 
+                "IsShowReceCaseButton": false, 
+                "ReceCaseButton": null, 
+                "BimId": "BM00000862", 
+                "ActId": "A010", 
+                "key": "4", 
+                "HasFreeTime": 1, 
+                "HasActFreeTime": 0, 
+                "FreeTime": -394.1, 
+                "TimeTip": 3, 
+                "ActFreeTime": 0, 
+                "ActTimeTip": 0
+            }, 
+            {
+                "TileFileDefine": {
+                    "FileName": "BIMTITLE", 
+                    "FileDesc": null, 
+                    "FileValue": "鸿福花园"
+                }, 
+                "ContentFileDefines": [
+                    {
+                        "FileName": "BIMNAME", 
+                        "FileDesc": "办理事项", 
+                        "FileValue": "建设用地规划许可证核发"
+                    }, 
+                    {
+                        "FileName": "UNITNAME", 
+                        "FileDesc": "单位名称", 
+                        "FileValue": "金盘置业有限公司"
+                    }, 
+                    {
+                        "FileName": "CONTENT_VALUE", 
+                        "FileDesc": "业务描述", 
+                        "FileValue": "申请用地类型：，用地面积：，项目类型：一般建设类项目，容积率："
+                    }
+                ], 
+                "IsShowReceCaseButton": false, 
+                "ReceCaseButton": null, 
+                "BimId": "BM00001087", 
+                "ActId": "A002", 
+                "key": "2", 
+                "HasFreeTime": 1, 
+                "HasActFreeTime": 0, 
+                "FreeTime": -348.5, 
+                "TimeTip": 3, 
+                "ActFreeTime": 0, 
+                "ActTimeTip": 0
+            }, 
+            {
+                "TileFileDefine": {
+                    "FileName": "BIMTITLE", 
+                    "FileDesc": null, 
+                    "FileValue": "水岸新都商品房（二期）"
+                }, 
+                "ContentFileDefines": [
+                    {
+                        "FileName": "BIMNAME", 
+                        "FileDesc": "办理事项", 
+                        "FileValue": "建筑工程规划许可证核发"
+                    }, 
+                    {
+                        "FileName": "UNITNAME", 
+                        "FileDesc": "单位名称", 
+                        "FileValue": "江阴市泰昌房地产开发有限公司 "
+                    }, 
+                    {
+                        "FileName": "CONTENT_VALUE", 
+                        "FileDesc": "业务描述", 
+                        "FileValue": null
+                    }
+                ], 
+                "IsShowReceCaseButton": false, 
+                "ReceCaseButton": null, 
+                "BimId": "BM00000887", 
+                "ActId": "A003", 
+                "key": "3", 
+                "HasFreeTime": 1, 
+                "HasActFreeTime": 0, 
+                "FreeTime": -367, 
+                "TimeTip": 3, 
+                "ActFreeTime": 0, 
+                "ActTimeTip": 0
+            }, 
+            {
+                "TileFileDefine": {
+                    "FileName": "BIMTITLE", 
+                    "FileDesc": null, 
+                    "FileValue": "水岸新都商品房（一期）"
+                }, 
+                "ContentFileDefines": [
+                    {
+                        "FileName": "BIMNAME", 
+                        "FileDesc": "办理事项", 
+                        "FileValue": "建筑工程规划许可证核发"
+                    }, 
+                    {
+                        "FileName": "UNITNAME", 
+                        "FileDesc": "单位名称", 
+                        "FileValue": "江阴市泰昌房地产开发有限公司 "
+                    }, 
+                    {
+                        "FileName": "CONTENT_VALUE", 
+                        "FileDesc": "业务描述", 
+                        "FileValue": null
+                    }
+                ], 
+                "IsShowReceCaseButton": false, 
+                "ReceCaseButton": null, 
+                "BimId": "BM00000886", 
+                "ActId": "A003", 
+                "key": "3", 
+                "HasFreeTime": 1, 
+                "HasActFreeTime": 0, 
+                "FreeTime": -367, 
+                "TimeTip": 3, 
+                "ActFreeTime": 0, 
+                "ActTimeTip": 0
+            }, 
+            {
+                "TileFileDefine": {
+                    "FileName": "BIMTITLE", 
+                    "FileDesc": null, 
+                    "FileValue": "水岸新都商品房"
+                }, 
+                "ContentFileDefines": [
+                    {
+                        "FileName": "BIMNAME", 
+                        "FileDesc": "办理事项", 
+                        "FileValue": "建设用地规划许可证核发"
+                    }, 
+                    {
+                        "FileName": "UNITNAME", 
+                        "FileDesc": "单位名称", 
+                        "FileValue": "江阴市泰昌房地产开发有限公司 "
+                    }, 
+                    {
+                        "FileName": "CONTENT_VALUE", 
+                        "FileDesc": "业务描述", 
+                        "FileValue": "申请用地类型：，用地面积：225530.8，项目类型：一般建设类项目，容积率："
+                    }
+                ], 
+                "IsShowReceCaseButton": false, 
+                "ReceCaseButton": null, 
+                "BimId": "BM00000885", 
+                "ActId": "A003", 
+                "key": "3", 
+                "HasFreeTime": 1, 
+                "HasActFreeTime": 0, 
+                "FreeTime": -367, 
+                "TimeTip": 3, 
+                "ActFreeTime": 0, 
+                "ActTimeTip": 0
+            }, 
+            {
+                "TileFileDefine": {
+                    "FileName": "BIMTITLE", 
+                    "FileDesc": null, 
+                    "FileValue": "立新小区商品房（三期）"
+                }, 
+                "ContentFileDefines": [
+                    {
+                        "FileName": "BIMNAME", 
+                        "FileDesc": "办理事项", 
+                        "FileValue": "建筑工程规划许可证核发"
+                    }, 
+                    {
+                        "FileName": "UNITNAME", 
+                        "FileDesc": "单位名称", 
+                        "FileValue": "江苏阳光置业发展有限公司"
+                    }, 
+                    {
+                        "FileName": "CONTENT_VALUE", 
+                        "FileDesc": "业务描述", 
+                        "FileValue": null
+                    }
+                ], 
+                "IsShowReceCaseButton": false, 
+                "ReceCaseButton": null, 
+                "BimId": "BM00000882", 
+                "ActId": "A010", 
+                "key": "3", 
+                "HasFreeTime": 1, 
+                "HasActFreeTime": 0, 
+                "FreeTime": -367, 
+                "TimeTip": 3, 
+                "ActFreeTime": 0, 
+                "ActTimeTip": 0
+            }
+        ], 
+        "Buttons": [
+            {
+                "BID": "B000015", 
+                "BUTTONKEY": "Send", 
+                "CLASSKEY": "icon-send", 
+                "COLORKEY": "btn-blue", 
+                "TEXT": "发送", 
+                "TYPE": 1, 
+                "BATCH": 1, 
+                "Params": "{}", 
+                "Controller": "Business", 
+                "ITEMS": null
+            }, 
+            {
+                "BID": "B000018", 
+                "BUTTONKEY": "Back", 
+                "CLASSKEY": "icon-send-back", 
+                "COLORKEY": "btn-orange", 
+                "TEXT": "退回", 
+                "TYPE": 1, 
+                "BATCH": 1, 
+                "Params": "{}", 
+                "Controller": "Business", 
+                "ITEMS": null
+            }, 
+            {
+                "BID": "B000845", 
+                "BUTTONKEY": "SpBack", 
+                "CLASSKEY": "icon-send-back", 
+                "COLORKEY": "btn-orange", 
+                "TEXT": "跨越退回", 
+                "TYPE": 1, 
+                "BATCH": 0, 
+                "Params": "{}", 
+                "Controller": "Business", 
+                "ITEMS": null
+            }, 
+            {
+                "BID": "B000016", 
+                "BUTTONKEY": "SpSend", 
+                "CLASSKEY": "icon-especially-send", 
+                "COLORKEY": "btn-green", 
+                "TEXT": "特送", 
+                "TYPE": 1, 
+                "BATCH": 1, 
+                "Params": "{}", 
+                "Controller": "Business", 
+                "ITEMS": null
+            }, 
+            {
+                "BID": "B000020", 
+                "BUTTONKEY": "Stop", 
+                "CLASSKEY": "icon-apply-delay-action", 
+                "COLORKEY": "btn-danger", 
+                "TEXT": "缓办", 
+                "TYPE": 1, 
+                "BATCH": 0, 
+                "Params": "{}", 
+                "Controller": "Business", 
+                "ITEMS": null
+            }, 
+            {
+                "BID": "B000344", 
+                "BUTTONKEY": "ChangeDoUser", 
+                "CLASSKEY": "icon-send", 
+                "COLORKEY": "btn-warning", 
+                "TEXT": "转办", 
+                "TYPE": 1, 
+                "BATCH": 1, 
+                "Params": "{}", 
+                "Controller": "Business", 
+                "ITEMS": null
+            }, 
+            {
+                "BID": "B000187", 
+                "BUTTONKEY": "Return", 
+                "CLASSKEY": "icon-send-back", 
+                "COLORKEY": null, 
+                "TEXT": "退件", 
+                "TYPE": 1, 
+                "BATCH": 0, 
+                "Params": "{}", 
+                "Controller": "Business", 
+                "ITEMS": null
+            }
+        ]
+    }, 
+    "ReturnCode": 0, 
+    "Message": null, 
+    "Action": null
+}

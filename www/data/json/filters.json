@@ -1,0 +1,365 @@
+﻿{
+    "TotalCount": 3, 
+    "Count": 3, 
+    "MaxDateTime": null, 
+    "ResultType": "object", 
+    "ModelType": null, 
+    "Data": [
+        {
+            "FilterTitle": "项目类型", 
+            "FilterType": 0, 
+            "FilterField": "GROUPTYPE", 
+            "FilterFileType": 1, 
+            "ConditionViewSubItems": [
+                {
+                    "SubFilterTitle": "建设类", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "GROUPTYPE", 
+                            "Type": "like", 
+                            "Value": "建设类", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 2, 
+                    "CurClass": null, 
+                    "Paramaras": null
+                }, 
+                {
+                    "SubFilterTitle": "临时类", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "GROUPTYPE", 
+                            "Type": "like", 
+                            "Value": "临时类", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 3, 
+                    "CurClass": null, 
+                    "Paramaras": null
+                }, 
+                {
+                    "SubFilterTitle": "乡村类", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "GROUPTYPE", 
+                            "Type": "like", 
+                            "Value": "乡村类", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 4, 
+                    "CurClass": null, 
+                    "Paramaras": null
+                }, 
+                {
+                    "SubFilterTitle": "户外广告", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "GROUPTYPE", 
+                            "Type": "like", 
+                            "Value": "户外广告", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 5, 
+                    "CurClass": null, 
+                    "Paramaras": null
+                }, 
+                {
+                    "SubFilterTitle": "私人建房", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "GROUPTYPE", 
+                            "Type": "like", 
+                            "Value": "私人建房类", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 6, 
+                    "CurClass": null, 
+                    "Paramaras": null
+                }
+            ], 
+            "Index": 1
+        }, 
+        {
+            "FilterTitle": "办理阶段(多选)", 
+            "FilterType": 1, 
+            "FilterField": "BIMNAME", 
+            "FilterFileType": 1, 
+            "ConditionViewSubItems": [
+                {
+                    "SubFilterTitle": "选址意见书", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "BIMNAME", 
+                            "Type": "in", 
+                            "Value": "建设项目选址意见书核发", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 2, 
+                    "CurClass": null, 
+                    "Paramaras": {
+                        "GROUPTYPE": [
+                            "建设类项目"
+                        ]
+                    }
+                }, 
+                {
+                    "SubFilterTitle": "规划条件", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "BIMNAME", 
+                            "Type": "in", 
+                            "Value": "土地使用权出让前规划条件核发", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 3, 
+                    "CurClass": null, 
+                    "Paramaras": {
+                        "GROUPTYPE": [
+                            "建设类项目"
+                        ]
+                    }
+                }, 
+                {
+                    "SubFilterTitle": "用地许可证", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "BIMNAME", 
+                            "Type": "in", 
+                            "Value": "建设用地规划许可证核发,临时建设用地规划许可证核发", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 4, 
+                    "CurClass": null, 
+                    "Paramaras": {
+                        "GROUPTYPE": [
+                            "建设类项目", 
+                            "临时类项目"
+                        ]
+                    }
+                }, 
+                {
+                    "SubFilterTitle": "方案审查", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "BIMNAME", 
+                            "Type": "in", 
+                            "Value": "规划与建筑设计方案审查", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 5, 
+                    "CurClass": null, 
+                    "Paramaras": {
+                        "GROUPTYPE": [
+                            "建设类项目"
+                        ]
+                    }
+                }, 
+                {
+                    "SubFilterTitle": "施工图规划审查", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "BIMNAME", 
+                            "Type": "in", 
+                            "Value": "建筑施工图规划审查", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 6, 
+                    "CurClass": null, 
+                    "Paramaras": {
+                        "GROUPTYPE": [
+                            "建设类项目"
+                        ]
+                    }
+                }, 
+                {
+                    "SubFilterTitle": "工程规划许可证", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "BIMNAME", 
+                            "Type": "in", 
+                            "Value": "建筑工程规划许可证核发,临时建设工程规划许可核发", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 7, 
+                    "CurClass": null, 
+                    "Paramaras": {
+                        "GROUPTYPE": [
+                            "建设类项目", 
+                            "临时类项目"
+                        ]
+                    }
+                }, 
+                {
+                    "SubFilterTitle": "户外广告", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "BIMNAME", 
+                            "Type": "in", 
+                            "Value": "户外广告设置", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 8, 
+                    "CurClass": null, 
+                    "Paramaras": {
+                        "GROUPTYPE": [
+                            "户外广告项目"
+                        ]
+                    }
+                }, 
+                {
+                    "SubFilterTitle": "放线与基础验线", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "BIMNAME", 
+                            "Type": "in", 
+                            "Value": "放线与基础验线", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 9, 
+                    "CurClass": null, 
+                    "Paramaras": {
+                        "GROUPTYPE": [
+                            "批后监管"
+                        ]
+                    }
+                }, 
+                {
+                    "SubFilterTitle": "批后跟踪巡查", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "BIMNAME", 
+                            "Type": "in", 
+                            "Value": "批后跟踪巡查", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 10, 
+                    "CurClass": null, 
+                    "Paramaras": {
+                        "GROUPTYPE": [
+                            "批后监管"
+                        ]
+                    }
+                }, 
+                {
+                    "SubFilterTitle": "行政处罚", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "BIMNAME", 
+                            "Type": "in", 
+                            "Value": "行政处罚", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 11, 
+                    "CurClass": null, 
+                    "Paramaras": {
+                        "GROUPTYPE": [
+                            "违法建设行政处罚"
+                        ]
+                    }
+                }
+            ], 
+            "Index": 2
+        }, 
+        {
+            "FilterTitle": "创建时间", 
+            "FilterType": 0, 
+            "FilterField": "W3.CREATEDATE", 
+            "FilterFileType": 3, 
+            "ConditionViewSubItems": [
+                {
+                    "SubFilterTitle": "今日", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "W3.CREATEDATE", 
+                            "Type": ">=", 
+                            "Value": "2017-05-27", 
+                            "ParamKey": null
+                        }, 
+                        {
+                            "Field": "W3.CREATEDATE", 
+                            "Type": "<", 
+                            "Value": "2017-05-28", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 2, 
+                    "CurClass": null, 
+                    "Paramaras": null
+                }, 
+                {
+                    "SubFilterTitle": "今年", 
+                    "IsCustom": 0, 
+                    "ControlExt": null, 
+                    "FilterConditions": [
+                        {
+                            "Field": "W3.CREATEDATE", 
+                            "Type": ">=", 
+                            "Value": "2017-01-01", 
+                            "ParamKey": null
+                        }, 
+                        {
+                            "Field": "W3.CREATEDATE", 
+                            "Type": "<", 
+                            "Value": "2018-01-01", 
+                            "ParamKey": null
+                        }
+                    ], 
+                    "subIndex": 4, 
+                    "CurClass": null, 
+                    "Paramaras": null
+                }
+            ], 
+            "Index": 3
+        }
+    ], 
+    "ReturnCode": 0, 
+    "Message": "", 
+    "Action": null
+}

@@ -1,0 +1,78 @@
+﻿<ion-view>
+    <ion-nav-title>
+        {{title}}
+    </ion-nav-title>
+
+    <ion-content class="bussinessBoxContainer bgcolor" scroll="true">
+        <div>
+            <div class="searchContainer" ng-show="dciSelectModel?true:false">
+                <label class="item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" placeholder="{{seachHolderText}}" ng-model="seachValue" ng-change="searchData(seachValue)">
+                </label>
+            </div>
+            <div class="businessQueryContainer" ng-show="(dciSelectModel && dciSelectModel.length>0)?true:false">
+                <ion-scroll class="businessBoxQuery" direction="x" overflow-scroll="false">
+                    <div class="businessBoxQueryNoWrap">
+                        <a ng-click="linkIconTrigger()" class="query-item" ng-repeat="i in dciSelectModel">
+                            <dci-select change="filtersData" click="linkIconTrigger" default-text="{{i.FilterTitle}}" title="{{i.FilterTitle}}" model="i.ConditionViewSubItems" class="bussinessBoxMultiselectText" multi-select="{{i.multiselect}}" is-required="false">
+                            </dci-select>
+                            <i class="ion-arrow-down-b"></i>
+                        </a>
+                    </div>
+                </ion-scroll>
+                <div class="queryPadding queryLeftPadding"></div>
+                <div class="queryPadding queryRightPadding"></div>
+            </div>
+        </div>
+        <div class="bussinessBoxList">
+            <ul class="list bussinessBoxProject">
+                <li class="item" ng-repeat="item in DataSourceListInstances" ng-show="item.BimId==null?false:true">
+                    <div class="bussinessContainer">
+                        <div class="bussinessContent" ng-click="businessContentGo(item.BimId,item.ActId,item.key,item.TileFileDefine.FileValue,item.IsShowReceCaseButton,item.ReceCaseButton)">
+                            <ul>
+                                <li class="bussinesstitle text-ellipsis">
+                                    <a> {{item.TileFileDefine.FileValue}}</a>
+                                </li>
+                                <li class="bussinessContentli text-ellipsis" ng-repeat="subItem in item.ContentFileDefines">
+                                    {{subItem.FileDesc}}:
+                                    {{subItem.FileValue}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bussinessOperation">
+                            <ul>
+                                <li ng-repeat="action in DataSourceShortCutButtons">
+                                    <a ng-click="sendNodeGo(item.BimId,item.ActId,item.key,action.BUTTONKEY,item)">
+                                        <i class="{{action.CLASSKEY}} {{action.COLORKEY}}"></i>
+                                        {{action.TEXT}}
+                                    </a>
+                                </li>
+                                <li ng-show="hasMoreButtons">
+                                    <a ng-click="showMoreButtons(item)">
+                                        <i class="icon-more icon"></i>
+                                        更多
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="businessStateRemind">
+                            <span class="businessRemind{{item.TimeTip}}" ng-show="item.TimeTip&&item.HasFreeTime">全{{item.FreeTime}}</span>
+                            <span class="businessRemind{{item.ActTimeTip}}" ng-show="item.ActTimeTip&&item.HasActFreeTime">节{{item.ActFreeTime}}</span>
+                        </div>
+
+                        <!--<div ng-show="(item.ActTimeTip+item.TimeTip)&&(item.HasFreeTime+item.HasActFreeTime)" class="businessStateRemind {{item.bussinessRemindClass}}">
+                            <span class="act" ng-show="item.ActTimeTip&&item.HasActFreeTime" ng-bind="item.ActFreeTime"></span>
+                            <span class="flow" ng-show="item.TimeTip&&item.HasFreeTime" ng-bind="item.FreeTime"></span>
+                        </div>-->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ion-infinite-scroll ng-if="hasmore"
+                             on-infinite="loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>
+

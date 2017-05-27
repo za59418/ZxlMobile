@@ -1,0 +1,184 @@
+﻿.tab-bottom > a > i {
+    display: block;
+    margin: 0 auto;
+    height: 32px;
+    font-size: 22px;
+    line-height: 31px;
+}
+
+/* 文字溢出省略号 */
+.text-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.dci-list .item {
+    margin: 0;
+    border-width: 0 0 1px 0;
+}
+
+/* 标题栏带图标按钮 */
+.bar .buttons .header-btn {
+    font-size: 18px;
+    margin: 6px;
+}
+
+    .bar .buttons .header-btn .header-btn-icon {
+        display: inline;
+        margin: 0;
+    }
+
+    .bar .buttons .header-btn .header-btn-text {
+        display: inline;
+        margin: 0;
+    }
+
+/* 背景颜色 */
+.bgcolor {
+    background-color: #f0f0f0; /*GWP 原来是#eee*/
+}
+
+/*标题背景颜色GWP*/
+.bar.bar-positive {
+    background-color: #33c7fe;
+    border-color: #33c7fe;
+    background-image: none;
+}
+
+/*tab页签选中颜色*/
+.tabs-striped.tabs-color-positive .tab-item.tab-item-active, .tabs-striped.tabs-color-positive .tab-item.active, .tabs-striped.tabs-color-positive .tab-item.activated {
+    color: #33c7fe;
+    border: 0 solid #33c7fe;
+}
+/*tab页签颜色*/
+.tabs-striped.tabs-color-positive .tab-item {
+    /*color:rgba(51,199,254,0.4);*/
+    color: black;
+}
+
+/* 平板 */
+@media(min-width:680px) {
+    .input-label {
+        font-size: 20px;
+    }
+
+    .item-complex .item-content, .item-radio .item-content {
+        padding: 26px 49px 26px 16px;
+    }
+
+    .item-radio .item-content {
+        padding-right: 64px;
+    }
+
+    .item-radio .radio-icon {
+        padding: 24px;
+    }
+
+    .bar {
+        height: 50px;
+    }
+
+    .platform-android .bar .title {
+        height: 49px;
+        line-height: 50px;
+        font-size: 24px;
+    }
+
+    .bar .title {
+        height: 49px;
+        line-height: 50px;
+        font-size: 24px;
+    }
+
+    .has-header {
+        top: 50px;
+    }
+
+    .has-tabs-top {
+        top: 107px;
+    }
+
+    .bar-header {
+        top: 0;
+    }
+
+    .bar-positive .button.button-clear {
+        font-size: 22px;
+    }
+
+    .tabs {
+        height: 62px;
+    }
+
+        .tabs-top > .tabs, .tabs.tabs-top {
+            top: 50px;
+        }
+
+    .tab-item {
+        font-size: 18px;
+        line-height: 65px;
+    }
+
+    .item {
+        padding: 18px 0px 18px 18px;
+        font-size: 20px;
+    }
+
+    .item-icon-left {
+        padding-left: 65px;
+    }
+
+    .item-icon-right {
+        padding-right: 65px;
+    }
+
+    .item-icon-left .icon {
+        left: 20px;
+    }
+
+    .item-icon-right .icon-accessory {
+        right: 10px;
+    }
+
+    .item-icon-left .icon-accessory, .item-icon-right .icon-accessory {
+        font-size: 20px;
+    }
+
+    .badge {
+        font-size: 16px;
+        padding: 4px 9px;
+    }
+
+    .item .badge {
+        top: 16px;
+        right: 40px;
+    }
+
+    .item-checkbox {
+        padding-left: 60px;
+    }
+
+    .item-thumbnail-left, .item-thumbnail-left .item-content {
+        padding-top: 18px;
+        padding-left: 120px;
+        min-height: 120px;
+    }
+
+        .item-thumbnail-left > img:first-child, .item-thumbnail-left .item-image, .item-thumbnail-left .item-content > img:first-child, .item-thumbnail-left .item-content .item-image {
+            top: 18px;
+            left: 18px;
+        }
+
+    .platform-ios.platform-cordova:not(.fullscreen) .has-header.has-tabs-top {
+        top: 127px;
+    }
+
+    .bar .buttons .header-btn {
+        font-size: 22px;
+    }
+
+    .popup-container .popup{
+        width:380px;
+    }
+}

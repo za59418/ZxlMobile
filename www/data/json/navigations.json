@@ -1,0 +1,95 @@
+﻿{
+    "TotalCount": 0, 
+    "Count": 0, 
+    "MaxDateTime": null, 
+    "ResultType": null, 
+    "ModelType": null, 
+    "Data": [
+        {
+            "Nid": "N0015", 
+            "Title": "业务办理", 
+            "ShowTip": 0, 
+            "IconClass": "", 
+            "ViewType": -1, 
+            "SubSystemViewNavigations": [
+                {
+                    "Nid": "N0022", 
+                    "Title": "我的工作", 
+                    "ShowTip": 1, 
+                    "IconClass": "glyphicon icon-mywork", 
+                    "ViewType": -1, 
+                    "SubSystemViewNavigations": [
+                        {
+                            "Nid": "N0064", 
+                            "Title": "待办业务", 
+                            "ShowTip": 1, 
+                            "IconClass": "glyphicon icon-form", 
+                            "ViewType": 0, 
+                            "SubSystemViewNavigations": [ ]
+                        }, 
+                        {
+                            "Nid": "N0065", 
+                            "Title": "待签业务", 
+                            "ShowTip": 1, 
+                            "IconClass": "glyphicon icon-write-form", 
+                            "ViewType": 0, 
+                            "SubSystemViewNavigations": [ ]
+                        }, 
+                        {
+                            "Nid": "N0010", 
+                            "Title": "待阅业务", 
+                            "ShowTip": 1, 
+                            "IconClass": "glyphicon icon-empty-view", 
+                            "ViewType": 0, 
+                            "SubSystemViewNavigations": [ ]
+                        }, 
+                        {
+                            "Nid": "N0067", 
+                            "Title": "已办业务", 
+                            "ShowTip": 0, 
+                            "IconClass": "glyphicon icon-Project-Ledger", 
+                            "ViewType": 0, 
+                            "SubSystemViewNavigations": [ ]
+                        }, 
+                        {
+                            "Nid": "N000248", 
+                            "Title": "缓办业务", 
+                            "ShowTip": 1, 
+                            "IconClass": "glyphicon icon-huanban-work", 
+                            "ViewType": 0, 
+                            "SubSystemViewNavigations": [ ]
+                        }, 
+                        {
+                            "Nid": "N0068", 
+                            "Title": "办结业务", 
+                            "ShowTip": 0, 
+                            "IconClass": "glyphicon icon-zaiban-project", 
+                            "ViewType": 0, 
+                            "SubSystemViewNavigations": [ ]
+                        }
+                    ]
+                }, 
+                {
+                    "Nid": "N0032", 
+                    "Title": "工作监控", 
+                    "ShowTip": 0, 
+                    "IconClass": "glyphicon glyphicon glyphicon-eye-open", 
+                    "ViewType": -1, 
+                    "SubSystemViewNavigations": [
+                        {
+                            "Nid": "N0056", 
+                            "Title": "工作监控", 
+                            "ShowTip": 0, 
+                            "IconClass": "glyphicon icon-read-only", 
+                            "ViewType": 0, 
+                            "SubSystemViewNavigations": [ ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ], 
+    "ReturnCode": 0, 
+    "Message": null, 
+    "Action": null
+}
