@@ -1,0 +1,40 @@
+﻿<ion-view>
+    <ion-nav-title>
+        {{sysName}}
+    </ion-nav-title>
+
+    <ion-content class="systemNavigations bgcolor">
+        <div class="spinner-container" ng-show="loadShow">
+            <ion-spinner></ion-spinner>
+        </div>
+        <div ng-show="contentShow">
+            <img ng-src="img/systemImages/{{sysKey}}.jpg" />
+            <div class="tabs-color-positive tabs-top tabs tabs-striped repeatTabsStyle">
+                <ion-scroll class="businessSystemTabScroll" direction="x" overflow-scroll="false">
+                    <a class="tab-item {{sysNav.activeclass}}" ng-repeat="sysNav in systemNavigationList" ng-click="changeTabShow(sysNav);">
+                        {{sysNav.Title}}
+                    </a>
+                </ion-scroll>
+            </div>
+            <ion-pan ng-show="activeSysNav.SubSystemViewNavigations.length>0">
+                <div class="sysNavsTabContent">
+                    <div ng-repeat="sysNav in activeSysNav.SubSystemViewNavigations">
+                        <div class="SysNavSecTitle title">{{sysNav.Title}}</div>
+                        <div class="row row-wrap" ng-if="sysNav.SubSystemViewNavigations.length>0">
+                            <span class="padding col col-25" ng-repeat="thirdNav in sysNav.SubSystemViewNavigations">
+                                <a align="center" ng-class="item" ng-click="LinkToBusinessBox(thirdNav.Nid,thirdNav.Title)">
+                                    <i class="{{thirdNav.IconClass}} navLinkColor{{thirdNav.IconColorIndex}}">
+                                        <span class="badge badge-assertive" ng-if="thirdNav.ShowTip&&TipCounts&&TipCounts[thirdNav.Nid]&&TipCounts[thirdNav.Nid]!=0">
+                                            {{ TipCounts[thirdNav.Nid] }}
+                                        </span>
+                                    </i>
+                                    <span>{{thirdNav.Title}}</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </ion-pan>
+        </div>
+    </ion-content>
+</ion-view>

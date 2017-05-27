@@ -11,20 +11,28 @@
         <link href="css/fontIcons.css" rel="stylesheet" />
         <link href="css/userManagerCenter.css" rel="stylesheet" />
         <link href="css/messageCenterBoxList.css" rel="stylesheet" />
+        <link href="css/systemNavigation.css" rel="stylesheet" />        
+        <!--<link href="css/index.css" rel="stylesheet" />-->
+        <link href="css/businessbox.css" rel="stylesheet" />
 
         <script src="lib/ionic/js/ionic.bundle.js"></script>
         <script src="cordova.js"></script>
 
         <script src="scripts/app.js"></script>
+
         <script src="scripts/controller/controller.js"></script>
+        <script src="scripts/controller/systemNavigation.js"></script>  
+              
         <script src="scripts/router/router.js"></script>
+
         <script src="scripts/service/service.js"></script>
         <script src="scripts/service/config.js"></script>
-    </head>
+        <script src="scripts/service/userViewModel.js"></script>
+
+
+        </head>
 
     <body ng-app="Mobile">
         <ion-pane ui-view="body"></ion-pane>
-        <ion-nav-view animation="slide-left-right">
-        </ion-nav-view>
     </body>
 </html>
