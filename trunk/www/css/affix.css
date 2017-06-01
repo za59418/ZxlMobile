@@ -1,0 +1,263 @@
+﻿/*附件图标*/
+.icon.custome {
+    top: 50%;
+    margin-top: -16px;
+    height: 32px;
+    width: 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.bmp {
+    background-image: url(../img/uploadFile/BMP.png);
+}
+
+.doc {
+    background-image: url(../img/uploadFile/DOC.png);
+}
+
+.docx {
+    background-image: url(../img/uploadFile/DOCX.png);
+}
+
+.dwg {
+    background-image: url(../img/uploadFile/DWG.png);
+}
+
+.gif {
+    background-image: url(../img/uploadFile/GIF.png);
+}
+
+.jar {
+    background-image: url(../img/uploadFile/JAR.png);
+}
+
+.jpeg {
+    background-image: url(../img/uploadFile/JPEG.png);
+}
+
+.jpg {
+    background-image: url(../img/uploadFile/JPG.png);
+}
+
+.pdf {
+    background-image: url(../img/uploadFile/PDF.png);
+}
+
+.png {
+    background-image: url(../img/uploadFile/PNG.png);
+}
+
+.ppt {
+    background-image: url(../img/uploadFile/PPT.png);
+}
+
+.pptx {
+    background-image: url(../img/uploadFile/PPTX.png);
+}
+
+.rar {
+    background-image: url(../img/uploadFile/RAR.png);
+}
+
+.txt {
+    background-image: url(../img/uploadFile/TXT.png);
+}
+
+.xls {
+    background-image: url(../img/uploadFile/XLS.png);
+}
+
+.xlsx {
+    background-image: url(../img/uploadFile/XLSX.png);
+}
+
+.zip {
+    background-image: url(../img/uploadFile/ZIP.png);
+}
+
+.other {
+    background-image: url(../img/uploadFile/other.png);
+}
+
+.affixTabContent {
+    padding-top: 10px;
+    background: #f0f0f0;
+}
+
+    .affixTabContent .FileNoDataTip {
+        padding-top: 10px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+.affixNavSplit {
+    padding: 0 5px;
+}
+
+.affixNav {
+    margin-bottom: 8px;
+    overflow-x: hidden !important;
+    padding-bottom: 0;
+    padding: 0 23px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+    .affixNav .scroll-bar {
+        display: none;
+    }
+
+    .affixNav a {
+        color: #8d8d8d;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+.affixTabContent ion-item span {
+    color: #000;
+}
+
+/*进度条*/
+.loadingWraper {
+    position: relative;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    border-radius: 1em;
+    background: #3388FF;
+}
+
+    .loadingWraper .bg {
+        position: absolute;
+        height: 100%;
+        z-index: 0;
+        padding: 0;
+        margin: 0;
+        border-radius: 1em;
+        background: #06AEFF;
+    }
+
+    .loadingWraper .text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        text-align: center;
+        line-height: 20px;
+        margin: 0;
+        left: 0;
+        top: 0;
+    }
+
+/*图片预览*/
+.imageGallery {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+    .imageGallery .scrollFullWidth {
+        width: 100%;
+        height: 100%;
+    }
+
+        .imageGallery .scrollFullWidth > .scroll {
+            height: 100%;
+        }
+
+            .imageGallery .scrollFullWidth > .scroll > div {
+                width: 100%;
+                height: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+/*更多按钮*/
+.moreButons {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .moreButons .wraper {
+        background: #fff;
+        width: 60%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .moreButons .wraper a {
+            display: block;
+            height: 45px;
+            line-height: 45px;
+            font-size: 1.2em;
+            text-indent: 1em;
+            border-bottom: solid 1px #D9D9D9;
+            color: #000000;
+        }
+
+.affix-list .list ion-item .item-content {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+    .affix-list .list ion-item .item-content > i:first-child {
+        font-size: 22px;
+        left: 19px;
+        color: #808080;
+    }
+
+    .affix-list .list ion-item .item-content > i:last-child {
+        color: #D2D2D2;
+    }
+
+@media(min-width:680px) {
+    .affix-list .list ion-item {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+        .affix-list .list ion-item .item-content {
+            padding-left: 60px;
+        }
+
+            .affix-list .list ion-item .item-content > i:first-child {
+                font-size: 26px;
+            }
+
+    .item-icon-left .icon-accessory, .item-icon-right .icon-accessory {
+        font-size: 26px;
+    }
+
+    .affixNav > div:first-child {
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .moreButons .wraper a {
+        font-size: 20px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .platform-ios.platform-cordova:not(.fullscreen) .has-header.has-tabs-top.affixTabContent {
+        top: 127px;
+    }
+
+    .affixTabContent .FileNoDataTip {
+        padding-top: 30px;
+        font-size: 20px;
+    }
+}
