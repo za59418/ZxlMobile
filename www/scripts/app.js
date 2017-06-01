@@ -1,4 +1,4 @@
-﻿angular.module('Mobile', ['ionic', 'Mobile.controller', 'Mobile.service', 'Mobile.router'])
+﻿angular.module('Mobile', ['ionic', 'Mobile.controller', 'Mobile.service', 'Mobile.router', 'Mobile.directive'])
 
 .config(['$ionicConfigProvider', function ($ionicConfigProvider) {
 

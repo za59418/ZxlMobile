@@ -1,0 +1,111 @@
+﻿<ion-view view-title="{{title}}">
+    <ion-nav-title class="businessContentTitle">
+        <ion-scroll direction="x" overflow-scroll="false">{{title}}</ion-scroll>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <!--<button ng-show="isShowMap" ng-click="openMapUrl()" class="button icon-case button-clear"> 图形</button>-->
+        <div ng-show="isShowMap" ng-click="openMapUrl()" class="header-btn">
+            <span class="header-btn-icon icon-case"></span>
+            <span class="header-btn-text">图形</span>
+        </div>
+    </ion-nav-buttons>
+    <ion-tabs class="tabs-top tabs-color-positive tabs-striped businessContent">
+        <ion-tab title="表单">
+            <div class="spinner-container form-wait" ng-show="!isShowForm">
+                <ion-spinner></ion-spinner>
+            </div>
+            <form ng-show="isShowForm" name="dciForm" novalidate>
+                <ion-content class="padding-top form-content">
+                    <div ng-show="isShowTitle" class="form-title">
+                        <span ng-click="formTitleClick()">
+                            <dci-select click='formTitleClick' model="model" multi-select="false" is-required="true" change="selectChange"></dci-select><span class="ion-arrow-down-b padding-left"></span>
+                        </span>
+                    </div>
+                    <div bind-html-compile="FormContent" class="form-control"></div>
+
+                    <!--<label ng-click="goto()" class="item item-input">
+                        <span class="input-label">签名板</span>
+                    </label>-->
+                </ion-content>
+                <div class="tabs-icon-top tabs tab-bottom form-button-list">
+                    <a ng-click="submitForm(dciForm)" ng-class="(dciForm.$invalid||IsReadOnly)&& isShowReceCaseButton=='false'?'form-disable':''" class="tab-item form-dark form-noborder">
+                        <i class="{{buttonClass}}" ng-class="(dciForm.$invalid||IsReadOnly)&& isShowReceCaseButton=='false'?'form-disable':''"></i>
+                        {{buttonText}}
+                    </a>
+                    <a class="tab-item form-dark form-noborder" ng-disabled="isDisabledBtn" ng-click="sendNodeGo(item.BimId,item.ActId,item.key,item.BUTTONKEY,item,dciForm)" ng-repeat="item in shortCutButtons">
+                        <i ng-class="isDisabledBtn==true?'form-disable':''" class="{{item.CLASSKEY}}{{item.iconClass}} {{item.COLORKEY}}"></i>
+                        {{item.TEXT}}
+                    </a>
+                    <a ng-disabled="isDisabledBtn" ng-class="isDisabledBtn=='true'?'form-disable':''" ng-click="showMoreButtons(item,dciForm)" ng-show="hasMoreButtons" class="tab-item form-dark form-noborder">
+                        <i class="icon-more icon"></i>
+                        更多
+                    </a>
+                </div>
+            </form>
+        </ion-tab>
+        <ion-tab title="附件" on-select="onCaseTabSelected('file')">
+            <ion-view name="file-tab">
+                <div class="spinner-container form-wait" ng-show="!isShowFile">
+                    <ion-spinner></ion-spinner>
+                </div>
+                <ion-content ng-show="isShowFile" class="affixTabContent" has-bouncing="true" overflow-scroll="false">
+                    <div ng-if="(currentFileList&&currentFileList.length>0)||fileNav.length>1">
+                        <ion-scroll class="affixNav" direction="x" overflow-scroll="false">
+                            <a href="javascript:;" ng-click="fileNavClick($index)" ng-repeat="nav in fileNav"><span ng-bind="nav.title"></span><i class="icon icon-accessory ion-chevron-right affixNavSplit"></i></a>
+                        </ion-scroll>
+                        <ion-list class="ionic affix-list">
+                            <ion-item ng-repeat="file in currentFileList" ng-click="fileClick($index)" class="item item-icon-left item-icon-right">
+                                <i ng-class="getFileType(file)"></i>
+                                <span ng-bind="file.ITEMNAME"></span>
+                                <i class="icon ion-chevron-right icon-accessory" ng-show="file.ITEMTYPE != 5"></i>
+                                <ion-option-button class="button-positive" ng-click="" ng-show="file.ITEMTYPE == 5">下载</ion-option-button>
+                                <ion-option-button class="button-calm" ng-click="affixPreview(file)" ng-show="file.ITEMTYPE == 5">预览</ion-option-button>
+                            </ion-item>
+                        </ion-list>
+                    </div>
+                    <div class="FileNoDataTip" ng-if="(!currentFileList||currentFileList.length==0)&&fileNav.length<=1">列表为空！</div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="流程" on-select="onCaseTabSelected('workFlow')">
+            <ion-view cache-view="false" name="workflow-tab">
+                <div class="spinner-container form-wait" ng-show="!isShowWorkFlow">
+                    <ion-spinner></ion-spinner>
+                </div>
+                <ion-content ng-show="isShowWorkFlow" class="workflowTabContent bgcolor">
+                    <img ng-src="{{workFlowImgUrl}}" ng-click="ShowBigWorkFlowImage();" />
+                    <div class="workFlowDetail">
+                        <ion-title><h4>详细信息</h4></ion-title>
+                        <ion-list>
+                            <div ng-repeat="activity in workFlowCaseActivitys">
+                                <ion-title>
+                                    <label class="{{activity.TitleColorClass}}">{{activity.KeyIndex}}</label>
+                                    <span title="{{activity.TitleContent}}" class="{{activity.TitleColorClass}}">{{activity.TitleContent}}</span>
+                                </ion-title>
+                                <div>
+                                    <div>
+                                        <div ng-if="activity.ReceTime">
+                                            接收时间：{{activity.ReceTime}}
+                                        </div>
+                                        <div ng-if="activity.SendTime">
+                                            办理时间：{{activity.SendTime}}
+                                        </div>
+                                        <div ng-if="activity.ToUserName">
+                                            办理人：{{activity.ToUserName}}
+                                        </div>
+                                        <div ng-if="activity.WorkTime">
+                                            办理用时：{{activity.WorkTime}}
+                                        </div>
+                                    </div>
+                                    <div class="workFlowDropRight" ng-if="activity.NextCaseAcitivitys.length>0">
+                                        <ion-icon class="ion-android-arrow-dropright-circle" ng-click="ShowWorkFlowDetailDropDown(activity.NextCaseAcitivitys)"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </ion-list>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+    </ion-tabs>
+</ion-view>

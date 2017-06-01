@@ -5,6 +5,12 @@
     $scope.login = function (username, password) {
         $state.go('tab.job');
     };
+
+    $scope.onibaritems = [
+    { title: "首页", href: "#/tab/Home" },
+    { title: "聊天", href: "#/tab/charts" }
+    ]
+
 })
 .controller('jobCtrl', function ($scope, $state, $ionicPopup, jobService) {
     $scope.onSwipeLeft = function () {

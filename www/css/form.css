@@ -1,0 +1,267 @@
+﻿.form-radio.item-radio input:checked + .radio-content .item-content {
+    background: #FFFFFF;
+}
+
+.form-dark, .form-dark * {
+    color: #000000;
+}
+
+
+.form-glossary {
+    position: absolute;
+    right: 0px;
+    bottom: 13px;
+}
+
+.form-textarea-right {
+    padding-right: 20px;
+}
+
+.form-title {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.form-content {
+    margin-bottom: 49px;
+    background: #EEEEEE;
+}
+
+.form-control {
+    margin-top: 10px;
+}
+
+    .form-control .input-label {
+        color: #777777;
+    }
+
+    .form-control .item {
+        color: #777777;
+    }
+
+    /*必填样式*/
+    .form-control input[required], .form-control textarea[required], .form-control label[required] dci-select span, .form-control .sendNotNull, .form-control dci-select.sendNotNull span {
+        background-color: MistyRose;
+    }
+
+    .form-control input[disabled], .form-control select[disabled], .form-control textarea[disabled], .form-control input[readonly]:not(.cloned-text-input), .form-control textarea[readonly]:not(.cloned-text-input), .form-control select[readonly] {
+        background-color: #f8f8f8;
+        cursor: not-allowed;
+    }
+
+.form-droplist {
+    height: 49px;
+}
+
+    .form-droplist dci-select span {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 7px;
+        height: 34px;
+        line-height: 34px;
+        color: #111;
+    }
+
+.form-control .form-droplist[disabled] dci-select span {
+    background: #f8f8f8;
+}
+
+.form-droplist .form-droplist-right {
+    position: absolute;
+    right: 0px;
+    padding-right: 16px;
+    top: 14px;
+}
+
+.form-button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background: #FFFFFF;
+}
+
+    .form-button button {
+        width: 90%;
+    }
+
+.form-color div {
+    text-align: center;
+    font-size: 27px;
+}
+
+.form-control .form-error {
+    border-width: 0px 2px 2px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: red;
+    border-left-color: red;
+    border-image: initial;
+    border-top-style: initial;
+    border-top-color: initial;
+    border-bottom: 3px solid red;
+    color: red;
+}
+
+    .form-control .form-error * {
+        color: red;
+    }
+
+.form-lable-error {
+    border: solid 2px red;
+    border-bottom: 0px;
+}
+
+.form-checkbox-right .checkbox input,
+.form-checkbox-right .checkbox-icon {
+    float: right;
+    right: -7px;
+}
+
+.form-control .form-checkbox-right[disabled] .checkbox-icon:before {
+    background-color: #f8f8f8;
+}
+
+.form-checkbox-right .checkbox-icon:after {
+    top: 33%;
+}
+
+.item-checkbox.form-checkbox-right {
+    padding: 16px;
+}
+
+.form-16fontsize {
+    font-size: 16px !important;
+}
+
+    .form-16fontsize * {
+        font-size: 16px !important;
+    }
+
+/* override radio button display with custom icon for both states */
+.form-radio.item-radio .radio-icon {
+    visibility: visible !important;
+    color: #111;
+}
+
+    .form-radio.item-radio .radio-icon:before {
+        content: "\f3a6" !important; /*deselected - Ionic class = ion-android-radio-button-off */
+    }
+
+.form-control .form-radio.item-radio[disabled] .radio-icon:before {
+    background: #f8f8f8;
+    color: #ddd;
+}
+
+.form-radio.item-radio input:checked + .radio-content .radio-icon:before {
+    content: "\f3a7" !important; /*selected Ionic class = ion-android-radio-button-on */
+}
+
+.form-codeQR {
+    padding: 10px;
+}
+
+    .form-codeQR img:first-child {
+        width: 50%;
+    }
+
+.form-codeBar img:first-child {
+    width: 66%;
+}
+
+.tabs-striped .form-button-list {
+    border-top: 1px solid #ddd !important;
+}
+
+.form-wait {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+}
+
+@media(min-width:680px) {
+    .form-content .item-input input {
+        padding-right: 44px;
+    }
+
+    .form-textarea-right {
+        padding-right: 44px;
+    }
+
+    .form-glossary {
+        bottom: 25px;
+        right: 11px;
+    }
+
+    .form-droplist dci-select span {
+        top: 22px;
+    }
+
+    .form-wait {
+        top: 120px;
+    }
+
+    .platform-ios.platform-cordova:not(.fullscreen) .form-wait {
+        top: 134px;
+    }
+
+    .form-droplist .form-droplist-right {
+        top: 24px;
+    }
+
+    .item-image {
+        padding: 0;
+    }
+
+    .item-checkbox.form-checkbox-right {
+        padding: 16px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .platform-ios.platform-cordova:not(.fullscreen) .has-header.has-tabs-top.form-content {
+        top: 122px;
+    }
+
+    .form-droplist {
+        height: auto;
+    }
+
+    .form-16fontsize {
+        font-size: 20px !important;
+    }
+
+    textarea.form-16fontsize {
+        line-height: 20px;
+    }
+
+    .item-radio {
+        padding: 0px;
+    }
+
+    .form-title {
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 5px;
+    }
+
+    .businessContent.tabs-striped.tabs-color-positive .form-noborder {
+        font-size: 16px;
+    }
+
+    .businessContent .tab-bottom > a > i {
+        font-size: 26px;
+    }
+
+    .form-codeQR {
+        padding: 10px;
+    }
+
+    .businessContent .tab-bottom > a > i {
+        height: 39px;
+        line-height: 39px;
+    }
+}

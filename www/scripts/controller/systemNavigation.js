@@ -106,6 +106,10 @@
     $scope.page_total = 0;
     $scope.hasmore = true;
 
+    $scope.$on('$ionicView.beforeEnter', function (event, viewData) {
+        viewData.enableBack = true;
+    });
+
     function GetBusinessData(pageSize, pageIndex, callback)//* state:1初始化，2刷新，3加载更多 */
     {
         $http({
@@ -217,4 +221,201 @@
             }
         }
     };
+
+    $scope.businessContentGo = function (BimId, ActId, key, title, isShowReceCaseButton, receCaseButton) {
+        $state.go('nav.business.businessContent', { BimId: BimId, ActId: ActId, key: key, nid: $stateParams.nid, title: title, moreButtons: $scope.DataSourceListButtons, shortCutButtons: $scope.DataSourceShortCutButtons, hasMoreButtons: $scope.hasMoreButtons, isShowReceCaseButton: isShowReceCaseButton, receCaseButton: receCaseButton });
+    }
+
+})
+.controller('businessContentCtrl', function ($scope, $http, $stateParams, $ionicModal, $timeout, config) {//, form, refresh) {
+//.controller('businessContentCtrl', function ($scope, $http, config, $sce, $stateParams, $ionicModal, $ionicPopup, $ionicScrollDelegate, pdfReview, FlowAction, $ionicPopover, $timeout, $cordovaInAppBrowser, $cordovaKeyboard){//, form, refresh) {
+    $scope.title = $stateParams.title;
+
+    $scope.buttonText = "保存";
+    $scope.isShowReceCaseButton = $stateParams.isShowReceCaseButton;
+    $scope.buttonClass = "icon-save";
+    $scope.isDisabledBtn = false;
+
+    $scope.$on('$ionicView.beforeEnter', function (event, viewData) {
+        viewData.enableBack = true;
+    });
+
+    $scope.shortCutButtons = $stateParams.shortCutButtons;
+    $scope.DataSourceListButtons = $stateParams.moreButtons;
+    $scope.hasMoreButtons = $stateParams.hasMoreButtons;
+    $scope.BimId = $stateParams.BimId;
+    $scope.ActId = $stateParams.ActId == undefined ? '' : $stateParams.ActId;
+    $scope.key = $stateParams.key == undefined ? "" : $stateParams.key;
+    $scope.nid = $stateParams.nid;
+
+
+    /**切换页签开始**/
+    $scope.onCaseTabSelected = function (tabName) {
+        if (tabName == 'workFlow' && !$scope.workFlowImgUrl) {
+            //loadWorkFlowData();
+        } else if (tabName == 'file' && !$scope.fileNavLoaded) {
+            loadFileNavData();
+        }
+        else if (tabName == 'opinonList' && !$scope.OpinonList) {
+            //loadOpinonListData();
+        }
+    };
+    /**切换页签开始**/
+
+
+    /**附件开始**/
+    var loadFileNavData = function () {
+        $scope.isShowFile = false;
+
+        $scope.fileNavLoaded = true;
+        //附件导航
+        $scope.fileNav = [];
+        $scope.allExt = { 'bmp': 1, 'doc': 1, 'docx': 1, 'dwg': 1, 'gif': 1, 'jar': 1, 'jpeg': 1, 'jpg': 1, 'other': 1, 'pdf': 1, 'png': 1, 'ppt': 1, 'pptx': 1, 'rar': 1, 'txt': 1, 'xls': 1, 'xlsx': 1, 'zip': 1 };
+        $scope.imgExt = { 'bmp': 1, 'gif': 1, 'jpeg': 1, 'jpg': 1, 'png': 1 }
+
+        
+        //获取附加列表
+        $http({
+            url: config.url + "data/json/affix.json",
+            method: 'get',
+            params: {
+                bimId: $scope.BimId,
+                actId: $scope.ActId,
+                nId: $scope.nid,
+                key: $scope.key
+            }
+        }).success(function (result) {
+            if (result && result.ReturnCode == 0) {
+                if (result.Data.length <= 0) return;
+
+                if (result.Data.length == 1) {
+                    $scope.fileList = result.Data[0].ITEMS;
+                    $scope.currentFileList = result.Data[0].ITEMS;
+                    $scope.fileNav[0] = { title: '全部', index: -1 }
+                } else {
+                    $scope.fileList = result.Data;
+                    $scope.currentFileList = result.Data;
+                    $scope.fileNav[0] = { title: '全部', index: -1 };
+                }
+            }
+            else {
+                if (result) {
+                    alert('附件树获取失败,原因：' + result.Message);
+                } else {
+                    alert('没有附件');
+                }
+            }
+            $scope.isShowFile = true;
+        }).error(function () {
+            alert('附件树获取失败');
+        });
+
+        //附件列表点击
+        $scope.fileClick = function (index) {
+            //判断内容是否存在
+            if (index < $scope.currentFileList.length) {
+                //判断点击的节点是否为目录
+                if ($scope.currentFileList[index].ITEMTYPE != '5') {
+                    $scope.fileNav[$scope.fileNav.length] = { title: $scope.currentFileList[index].ITEMNAME, index: index };
+                    $scope.currentFileList = $scope.currentFileList[index].ITEMS;
+                    $ionicScrollDelegate.scrollTop();
+                } else {
+                    $scope.affixPreview($scope.currentFileList[index]);
+                }
+            }
+        }
+
+        //预览
+        $scope.affixPreview = function (file) {
+            $http({
+                url: config.url + "data/json/affixView.json",
+                method: 'get',
+                params: {
+                    bimId: $scope.BimId,
+                    actId: $scope.ActId,
+                    bicId: file.ITEMID
+                }
+            }).success(function (result) {
+                if (result.ReturnCode == 0) {
+                    var ext = result.Data.substr(result.Data.lastIndexOf('.') + 1).toLowerCase();
+                    if ($scope.imgExt[ext]) {
+                        var modalScope = {};
+                        modalScope.closeModal = $scope.closeModal;
+                        $scope.affixShowImg = config.host + result.Data;
+                        modalScope.workFlowImgUrl = result.Data;
+                        $scope.showModal('template/business/affix/imageGallery.html', modalScope);
+                    } else if (ext == 'pdf') {
+                        //var serverUrl = config.host + result.Data;
+                        //var fileName = result.Data.substr(result.Data.lastIndexOf('/') + 1);
+                        //pdfReview.show($scope, serverUrl, fileName);
+                    } else {
+                        alert('此类型文件不支持预览');
+                    }
+                }
+            }).error(function () {
+                alert('附件地址获取失败');
+            })
+        }
+
+        //附件导航点击
+        $scope.fileNavClick = function (index) {
+            //删除导航后面的元素
+            $scope.fileNav.splice(index + 1, $scope.fileNav.length - index - 1);
+            //重新定位currentFileList
+            var tmpList = $scope.fileList;
+            for (var i = 1; i < $scope.fileNav.length; i++) {
+                tmpList = tmpList[$scope.fileNav[i].index].ITEMS;
+            }
+            $scope.currentFileList = tmpList;
+        }
+
+        //根据文件类型获取图标
+        $scope.getFileType = function (file) {
+            if (!file) return "";
+            var tmp = " icon ";
+            //目录
+            if (file.ITEMTYPE != 5) {
+                tmp += file.STATE ? " icon-filemanagement01 " : " icon-filemanagement022 ";
+            } else {//文件
+                tmp += " custome ";
+                var ext = file.ITEMNAME.substr(file.ITEMNAME.lastIndexOf('.') + 1).toLowerCase();
+                if ($scope.allExt[ext]) {
+                    tmp = tmp + " " + ext + " ";
+                    if ($scope.imgExt[ext]) {
+                        file.isImg = true;
+                    }
+                } else {
+                    tmp = tmp + " other ";
+                }
+            }
+            return tmp;
+        }
+    }
+    /**附件结束**/
+
+    $scope.showModal = function (templateUrl) {
+        if (!$scope.modal) {
+            $ionicModal.fromTemplateUrl(templateUrl, {
+                scope: $scope,
+                animation: 'slide-in-up'
+            }).then(function (modal) {
+                $scope.modal = modal;
+                $scope.modal.show();
+            });
+        }
+    };
+    $scope.closeModal = function () {
+        if ($scope.modal)
+            $scope.modal.hide();
+    };
+    $scope.$on('modal.hidden', function () {
+        $timeout(function () {
+            if ($scope.modal) {
+                $scope.modal.remove();
+                delete $scope.modal;
+            }
+        })
+    });
+
+
 })

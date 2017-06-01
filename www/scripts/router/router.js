@@ -127,6 +127,16 @@
             }
         }
     })
+    .state('nav.business.businessContent', {
+        url: '/businessContent?BimId&ActId&key&nid&title&isShowReceCaseButton',
+        params: { moreButtons: null, shortCutButtons: null, hasMoreButtons: null, receCaseButton: null },
+        views: {
+            'content': {
+                templateUrl: 'template/business/businessContent.html',
+                controller: 'businessContentCtrl'
+            }
+        }
+    })
     ;
     //$urlRouterProvider.otherwise("/tab/message");
 
