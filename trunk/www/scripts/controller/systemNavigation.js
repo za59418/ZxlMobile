@@ -227,7 +227,7 @@
     }
 
 })
-.controller('businessContentCtrl', function ($scope, $http, $stateParams, $ionicModal, $timeout, config) {//, form, refresh) {
+.controller('businessContentCtrl', function ($scope, $http, $stateParams, $ionicModal, $timeout, formService, config) {//, form, refresh) {
 //.controller('businessContentCtrl', function ($scope, $http, config, $sce, $stateParams, $ionicModal, $ionicPopup, $ionicScrollDelegate, pdfReview, FlowAction, $ionicPopover, $timeout, $cordovaInAppBrowser, $cordovaKeyboard){//, form, refresh) {
     $scope.title = $stateParams.title;
 
@@ -252,7 +252,7 @@
     /**切换页签开始**/
     $scope.onCaseTabSelected = function (tabName) {
         if (tabName == 'workFlow' && !$scope.workFlowImgUrl) {
-            //loadWorkFlowData();
+            loadWorkFlowData();
         } else if (tabName == 'file' && !$scope.fileNavLoaded) {
             loadFileNavData();
         }
@@ -262,6 +262,8 @@
     };
     /**切换页签开始**/
 
+    /**表单**/
+    formService($scope);
 
     /**附件开始**/
     var loadFileNavData = function () {
@@ -392,6 +394,52 @@
         }
     }
     /**附件结束**/
+
+    /**加载流程数据开始**/
+    var loadWorkFlowData = function () {
+        $scope.isShowWorkFlow = false;
+
+        $http({
+            url: config.url + "data/json/flowChart.json",
+            method: 'get',
+            params: {
+                bimId: $scope.BimId
+            }
+        }).success(function (result) {
+            if (result.ReturnCode == 0) {
+                $scope.workFlowImgUrl = config.webUrl + result.Data.CaseFlowImgUrl + "?" + Math.random();
+                $scope.workFlowCaseActivitys = result.Data.CaseActivitys;
+            }
+            else {
+                alert('生成流程图图片及获取流程信息失败,原因：' + result.Message);
+            }
+        }).error(function () {
+            alert('生成流程图图片及获取流程信息失败！');
+        }).finally(function () {
+            $scope.isShowWorkFlow = true;
+        })
+
+        $scope.ShowBigWorkFlowImage = function () {
+            $scope.ModalImgUrl = $scope.workFlowImgUrl;
+            $scope.ModalBgColor = "modalBgColorBlack";
+            $scope.showModal('templates/workFlowModal/imageModal.html');
+        };
+
+        $scope.ShowWorkFlowDetailDropDownNext = function (nextCaseAcitivitys) {
+            $scope.topLevelData.push($scope.caseAcitivitys);
+            $scope.caseAcitivitys = nextCaseAcitivitys;
+        };
+        $scope.ShowWorkFlowDetailDropUp = function () {
+            $scope.caseAcitivitys = $scope.topLevelData.pop();
+        };
+
+        $scope.ShowWorkFlowDetailDropDown = function (caseAcitivitys) {
+            $scope.caseAcitivitys = caseAcitivitys;
+            $scope.topLevelData = [];
+            $scope.showModal('templates/workFlowModal/detailModal.html');
+        }
+    };
+    /**加载流程数据结束**/
 
     $scope.showModal = function (templateUrl) {
         if (!$scope.modal) {

@@ -21,7 +21,7 @@
                             <dci-select click='formTitleClick' model="model" multi-select="false" is-required="true" change="selectChange"></dci-select><span class="ion-arrow-down-b padding-left"></span>
                         </span>
                     </div>
-                    <div bind-html-compile="FormContent" class="form-control"></div>
+                    <div ng-bind-html="FormContent" class="form-control"></div>
 
                     <!--<label ng-click="goto()" class="item item-input">
                         <span class="input-label">签名板</span>
