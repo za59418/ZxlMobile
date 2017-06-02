@@ -1,0 +1,122 @@
+﻿{
+    "ResultType": null, 
+    "ModelType": null, 
+    "Data": {
+        "CaseFlowImgUrl": "/FlowImages/BM00000888.bmp", 
+        "CaseActivitys": [
+            {
+                "KeyIndex": 1, 
+                "TitleColorClass": "DefaultColor", 
+                "TitleContent": "【开始】", 
+                "SendTime": "2015-09-19 13:25", 
+                "ReceTime": null, 
+                "ToUserName": null, 
+                "WorkTime": null, 
+                "NextCaseAcitivitys": null
+            }, 
+            {
+                "KeyIndex": 2, 
+                "TitleColorClass": "DefaultColor", 
+                "TitleContent": "【开始】发送【窗口/分局科员受理】", 
+                "SendTime": "2015-09-19 13:25", 
+                "ReceTime": "2015-09-19 13:25", 
+                "ToUserName": "徐剑", 
+                "WorkTime": " ", 
+                "NextCaseAcitivitys": null
+            }, 
+            {
+                "KeyIndex": 3, 
+                "TitleColorClass": "SpSendColor", 
+                "TitleContent": "【窗口/分局科员受理】特送【市局科员初审】", 
+                "SendTime": "2017-03-25 15:19", 
+                "ReceTime": "2015-09-19 13:25", 
+                "ToUserName": "周靖", 
+                "WorkTime": "495天", 
+                "NextCaseAcitivitys": null
+            }, 
+            {
+                "KeyIndex": 4, 
+                "TitleColorClass": "DoingColor", 
+                "TitleContent": "【市局科员初审】退回【窗口/分局科员受理】", 
+                "SendTime": "办理中", 
+                "ReceTime": "2017-03-25 15:19", 
+                "ToUserName": "徐剑", 
+                "WorkTime": "1天2小时", 
+                "NextCaseAcitivitys": null
+            }, 
+            {
+                "KeyIndex": 5, 
+                "TitleColorClass": "DefaultColor", 
+                "TitleContent": "【窗口/分局科员受理】发送【科长分件】", 
+                "SendTime": "2017-06-02 09:17", 
+                "ReceTime": "2017-03-28 10:53", 
+                "ToUserName": "周靖", 
+                "WorkTime": "44天6小时", 
+                "NextCaseAcitivitys": null
+            }, 
+            {
+                "KeyIndex": 6, 
+                "TitleColorClass": "DefaultColor", 
+                "TitleContent": "【科长分件】发送【市局科员初审】", 
+                "SendTime": "2017-06-02 09:31", 
+                "ReceTime": "2017-06-02 09:17", 
+                "ToUserName": "周靖", 
+                "WorkTime": " ", 
+                "NextCaseAcitivitys": null
+            }, 
+            {
+                "KeyIndex": 7, 
+                "TitleColorClass": "DefaultColor", 
+                "TitleContent": "【市局科员初审】发送【副科长审查】", 
+                "SendTime": "2017-06-02 09:31", 
+                "ReceTime": "2017-06-02 09:31", 
+                "ToUserName": "周靖", 
+                "WorkTime": " ", 
+                "NextCaseAcitivitys": null
+            }, 
+            {
+                "KeyIndex": 8, 
+                "TitleColorClass": "DefaultColor", 
+                "TitleContent": "【副科长审查】发送【科长/分局负责人审查】", 
+                "SendTime": "2017-06-02 09:32", 
+                "ReceTime": "2017-06-02 09:31", 
+                "ToUserName": "周靖", 
+                "WorkTime": " ", 
+                "NextCaseAcitivitys": null
+            }, 
+            {
+                "KeyIndex": 9, 
+                "TitleColorClass": "DefaultColor", 
+                "TitleContent": "【科长/分局负责人审查】发送【市局分管领导审查】", 
+                "SendTime": "2017-06-02 09:33", 
+                "ReceTime": "2017-06-02 09:32", 
+                "ToUserName": "管理员", 
+                "WorkTime": " ", 
+                "NextCaseAcitivitys": null
+            }, 
+            {
+                "KeyIndex": 10, 
+                "TitleColorClass": "DefaultColor", 
+                "TitleContent": "【市局分管领导审查】发送【主要领导审批】", 
+                "SendTime": "2017-06-02 09:34", 
+                "ReceTime": "2017-06-02 09:33", 
+                "ToUserName": "周靖", 
+                "WorkTime": " ", 
+                "NextCaseAcitivitys": null
+            }, 
+            {
+                "KeyIndex": 11, 
+                "TitleColorClass": "DoingColor", 
+                "TitleContent": "【主要领导审批】特送【窗口/分局科员受理】", 
+                "SendTime": "办理中", 
+                "ReceTime": "2017-06-02 09:34", 
+                "ToUserName": "周靖", 
+                "WorkTime": " ", 
+                "NextCaseAcitivitys": null
+            }
+        ]
+    }, 
+    "ReturnCode": 0, 
+    "Message": null, 
+    "Action": null
+}

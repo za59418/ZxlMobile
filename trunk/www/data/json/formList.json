@@ -1,0 +1,63 @@
+﻿{
+    "TotalCount": 3, 
+    "Count": 3, 
+    "MaxDateTime": null, 
+    "ResultType": "object", 
+    "ModelType": null, 
+    "Data": [
+        {
+            "IID": "BM00001528", 
+            "FORMID": "FM000001", 
+            "DOPRINT": true, 
+            "ITEMTIP": null, 
+            "DOOPEN": true, 
+            "ITEMS": null, 
+            "ITEMID": "BI0000002337", 
+            "ITEMPID": "BI0000002336", 
+            "ITEMNAME": "收件登记表", 
+            "ITEMTYPE": 8, 
+            "STATE": 1, 
+            "READONLY": false, 
+            "TEMPLATEID": "BI00000041", 
+            "SINDEX": 11, 
+            "CREATOR": "UE000070"
+        }, 
+        {
+            "IID": "BM00001528", 
+            "FORMID": "FM000021", 
+            "DOPRINT": true, 
+            "ITEMTIP": null, 
+            "DOOPEN": true, 
+            "ITEMS": null, 
+            "ITEMID": "BI0000002338", 
+            "ITEMPID": "BI0000002336", 
+            "ITEMNAME": "规划条件申请表", 
+            "ITEMTYPE": 3, 
+            "STATE": 2, 
+            "READONLY": false, 
+            "TEMPLATEID": "BI00000002", 
+            "SINDEX": 12, 
+            "CREATOR": "UE000070"
+        }, 
+        {
+            "IID": "BM00001528", 
+            "FORMID": "FM000002", 
+            "DOPRINT": true, 
+            "ITEMTIP": null, 
+            "DOOPEN": true, 
+            "ITEMS": null, 
+            "ITEMID": "BI0000002339", 
+            "ITEMPID": "BI0000002336", 
+            "ITEMNAME": "受理通知书", 
+            "ITEMTYPE": 3, 
+            "STATE": 1, 
+            "READONLY": false, 
+            "TEMPLATEID": "BI00000095", 
+            "SINDEX": 13, 
+            "CREATOR": "UE000070"
+        }
+    ], 
+    "ReturnCode": 0, 
+    "Message": null, 
+    "Action": null
+}

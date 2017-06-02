@@ -1,0 +1,177 @@
+﻿.workflowTabContent {
+    padding: 10px 0px;
+}
+
+    .workflowTabContent img {
+        max-width: 100%;
+        max-height: 60%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .workflowTabContent .workFlowDetail {
+        margin-top: 8px;
+        min-height: 40%;
+        background-color: #fff;
+        padding: 10px 16px;
+    }
+
+    .workflowTabContent .workFlowDetailNext {
+        margin-top: 0px;
+        height: 100%;
+    }
+
+
+
+    .workflowTabContent .workFlowDetail .list > div {
+        color: #666666;
+        padding: 6px 0px 6px 27px;
+        border-bottom: solid 1px #ddd;
+        font-size: 16px;
+        width: 100%;
+    }
+
+        .workflowTabContent .workFlowDetail .list > div > .title > label {
+            margin-left: -29px;
+            width: 24px;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            font-size: 16px;
+            text-align: center;
+        }
+
+            .workflowTabContent .workFlowDetail .list > div > .title > label.DefaultColor {
+                color: #208211;
+                border: 1px solid #208211;
+            }
+
+            .workflowTabContent .workFlowDetail .list > div > .title > label.DoingColor {
+                color: #e27d17;
+                border: 1px solid #e27d17;
+            }
+
+            .workflowTabContent .workFlowDetail .list > div > .title > label.SpSendColor {
+                color: #37a6d1;
+                border: 1px solid #37a6d1;
+            }
+
+            .workflowTabContent .workFlowDetail .list > div > .title > label.BackReturnColor {
+                color: red;
+                border: 1px solid red;
+            }
+
+        .workflowTabContent .workFlowDetail .list > div > .title > span {
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+            .workflowTabContent .workFlowDetail .list > div > .title > span.DefaultColor {
+                color: #208211;
+            }
+
+            .workflowTabContent .workFlowDetail .list > div > .title > span.DoingColor {
+                color: #e27d17;
+            }
+
+            .workflowTabContent .workFlowDetail .list > div > .title > span.SpSendColor {
+                color: #37a6d1;
+            }
+
+            .workflowTabContent .workFlowDetail .list > div > .title > span.BackReturnColor {
+                color: red;
+            }
+
+        .workflowTabContent .workFlowDetail .list > div > div {
+            position: relative;
+        }
+
+            .workflowTabContent .workFlowDetail .list > div > div > .workFlowDropRight {
+                position: absolute;
+                top: 1px;
+                right: 1px;
+                color: orange;
+                font-size: 28px;
+            }
+
+            .workflowTabContent .workFlowDetail .list > div > div > div > div {
+                line-height: 24px;
+            }
+
+.workflowBigImg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+    .workflowBigImg.modalBgColorBlack {
+        background-color: black;
+    }
+
+    .workflowBigImg .scrollFullWidth {
+        width: 100%;
+        height: 100%;
+    }
+
+        .workflowBigImg .scrollFullWidth > .scroll {
+            height: 100%;
+        }
+
+            .workflowBigImg .scrollFullWidth > .scroll > div {
+                width: 100%;
+                height: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+@media(min-width:680px) {
+    .platform-ios.platform-cordova .modal-wrapper .modal .workflowTabContent {
+        top: 64px;
+    }
+
+    .workflowTabContent .workFlowDetail {
+        padding: 10px 23px;
+    }
+
+        .workflowTabContent .workFlowDetail h4 {
+            font-size: 24px;
+        }
+
+
+        .workflowTabContent .workFlowDetail .list > div {
+            font-size: 22px;
+            padding: 12px 0 12px 42px;
+        }
+
+            .workflowTabContent .workFlowDetail .list > div > div > .workFlowDropRight {
+                font-size: 36px;
+                top: -2px;
+            }
+
+            .workflowTabContent .workFlowDetail .list > div > .title > label {
+                font-size: 22px;
+                width: 33px;
+                margin-left: -39px;
+            }
+
+            .workflowTabContent .workFlowDetail .list > div > div > div > div {
+                line-height: 30px;
+            }
+
+            .workflowTabContent .workFlowDetail .list > div > .title > span {
+                line-height: 30px;
+            }
+
+    .platform-ios.platform-cordova .modal-wrapper .modal.workflowBigImg .bar-header:not(.bar-subheader) {
+        height: 64px;
+    }
+
+    .platform-ios.platform-cordova:not(.fullscreen) .modal.workflowBigImg .bar-header:not(.bar-subheader) > * {
+        margin-top: 20px;
+    }
+}
